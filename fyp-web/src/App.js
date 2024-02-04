@@ -64,8 +64,9 @@ function App() {
                 <CardMedia
                   component="img"
                   height="auto"
-                  image="https://media1.tenor.com/m/X1c9C-pHRQsAAAAC/pikmin-bulborb.gif"
-                  alt="HullBreaker"
+                  // image is from the images folder and is me.png
+                  image="/images/me.png"
+                  alt="Anthony O'Keeffe Picture"
                 />
                 <Typography variant="h6" component="div" gutterBottom paddingTop={'0.2em'}>
                   Anthony O'Keeffe
