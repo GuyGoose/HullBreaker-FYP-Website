@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/HullBreaker-FYP-Website/static/css/main.185a1cae.css",
-    "main.js": "/HullBreaker-FYP-Website/static/js/main.d714c91a.js",
+    "main.js": "/HullBreaker-FYP-Website/static/js/main.cd659f54.js",
     "static/js/787.5e8c36ef.chunk.js": "/HullBreaker-FYP-Website/static/js/787.5e8c36ef.chunk.js",
     "index.html": "/HullBreaker-FYP-Website/index.html",
     "main.185a1cae.css.map": "/HullBreaker-FYP-Website/static/css/main.185a1cae.css.map",
-    "main.d714c91a.js.map": "/HullBreaker-FYP-Website/static/js/main.d714c91a.js.map",
+    "main.cd659f54.js.map": "/HullBreaker-FYP-Website/static/js/main.cd659f54.js.map",
     "787.5e8c36ef.chunk.js.map": "/HullBreaker-FYP-Website/static/js/787.5e8c36ef.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.185a1cae.css",
-    "static/js/main.d714c91a.js"
+    "static/js/main.cd659f54.js"
   ]
 }
