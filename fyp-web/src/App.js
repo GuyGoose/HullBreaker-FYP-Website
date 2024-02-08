@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import { Container, Typography, Grid, Box, Card, CardMedia } from '@mui/material';
+import { Container, Typography, Grid, Box, Card, CardMedia, ListItem, ListItemText, ListItemAvatar, Avatar } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import { styled, ThemeProvider, createTheme } from '@mui/material/styles';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
 import './App.css';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -12,6 +15,17 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
   color: theme.palette.text.primary,
 }));
+
+const itemData = [
+  {
+    img: 'https://github.com/GuyGoose/HullBreaker-FYP-Website/blob/main/fyp-web/images/HullBreakerTempLogo.jpg?raw=true',
+    title: 'HullBreaker Logo',
+  },
+  {
+    img: 'https://github.com/GuyGoose/HullBreaker-FYP-Website/blob/main/fyp-web/images/map.png?raw=true',
+    title: 'HullBreaker Map Example',
+  },
+];
 
 const darkTheme = createTheme({
   palette: {
@@ -27,6 +41,7 @@ const darkTheme = createTheme({
     },
     text: {
       primary: '#ffffff',
+      secondary: '#C6C0BF',
     },
   },
 });
@@ -35,26 +50,53 @@ function App() {
   return (
     <ThemeProvider theme={ darkTheme }>
       <Box sx={{ flexGrow: 0.5 }}>
+        <Item>
+          <Card>
+          <Typography variant="h1" component="div">
+            HullBreaker
+          </Typography>
+          </Card>
+        </Item>
         <Grid container>
           <Grid item xs={8}>
             <Item>
               <Card>
-                <Typography variant="h2" component="div" gutterBottom>
-                  HullBreaker
+                <Typography variant="h4" component="div" gutterBottom paddingTop={'0.5em'}>
+                Academic Title
                 </Typography>
-                <Typography variant="h5" component="div" gutterBottom>
-                  A Roguelike RPG Inspired Game
+                <Typography sx={{color : '#C6C0BF'}} variant="h5" component="div" gutterBottom>
+                  A 2D, Roguelike, RPG Unity Game with Advanced Faction Based AI, Dynamic Difficulty Adjustment and Procedural Generation
                 </Typography>
               </Card>
             </Item>
             <Item>
               <Card>
-              <Typography variant="h5" component="div" gutterBottom paddingTop={'1em'}>
+              <Typography variant="h4" component="div" gutterBottom paddingTop={'1em'}>
                 About
               </Typography>
-              <Typography variant="body1" component="div" gutterBottom padding={'1em'}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <Typography sx={{color : '#C6C0BF'}} variant="body1" component="div" gutterBottom padding={'1em'} >
+              HullBreaker is a 2D role playing, roguelike game. A roguelike game is a genre of game in which death is permanent and the game is restarted upon dying. The game is set in a war-stricken galaxy called Alpha-13, based in the far future. The player takes up the role of one of several playable characters, each an ex-employee of the mega corporation HullBreakers Incorporated. The player learns at the beginning of the game that HullBreakers Inc. are responsible for the galaxy wide civil war and so they embark on a mission to take revenge on the bosses of the mega corporation. HullBreaker features many complex and engaging mechanics such as procedurally generated solar systems with roaming AI ships that can affect the worlds around them, an RPG inspired combat system with dozens of ships and weapons to be used. The game also features a dynamic enemy difficulty system to guarantee that the player always has a challenge to face on each subsequent playthrough.
               </Typography>
+              </Card>
+            </Item>
+            <Item>
+              <Card> 
+              <ImageList sx={{ width: 500, height: 450 }}>
+                {itemData.map((item) => (
+                  <ImageListItem key={item.img}>
+                    <img
+                      srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                      src={`${item.img}?w=248&fit=crop&auto=format`}
+                      alt={item.title}
+                      loading="lazy"
+                    />
+                    <ImageListItemBar
+                      title={item.title}
+                      position="below"
+                    />
+                  </ImageListItem>
+                ))}
+              </ImageList>
               </Card>
             </Item>
           </Grid>
@@ -64,16 +106,17 @@ function App() {
                 <CardMedia
                   component="img"
                   height="auto"
-                  // image is from the images folder and is me.png
-                  image="/images/me.png"
+                  image="https://github.com/GuyGoose/HullBreaker-FYP-Website/blob/main/fyp-web/images/me.png?raw=true"
                   alt="Anthony O'Keeffe Picture"
                 />
-                <Typography variant="h6" component="div" gutterBottom paddingTop={'0.2em'}>
-                  Anthony O'Keeffe
-                </Typography>
-                <Typography variant="body1" component="div" gutterBottom>
-                  20093999
-                </Typography>
+                <ListItem>
+                  <ListItemAvatar>
+                    <Avatar>
+                      A
+                    </Avatar>
+                  </ListItemAvatar>
+                  <ListItemText primary="Anthony O'Keeffe" secondary="20093999"  />
+                </ListItem>
               </Card>
             </Item>
             <Item>
