@@ -25,6 +25,14 @@ const itemData = [
     img: 'https://github.com/GuyGoose/HullBreaker-FYP-Website/blob/main/fyp-web/images/map.png?raw=true',
     title: 'HullBreaker Map Example',
   },
+  {
+    img: 'https://github.com/GuyGoose/HullBreaker-FYP-Website/blob/main/fyp-web/images/combatdemo.png?raw=true',
+    title: 'HullBreaker Combat Example',
+  },
+  {
+    img: 'https://github.com/GuyGoose/HullBreaker-FYP-Website/blob/main/fyp-web/images/navmenu.png?raw=true',
+    title: 'HullBreaker Navigation Menu Example',
+  },
 ];
 
 const darkTheme = createTheme({
@@ -81,7 +89,7 @@ function App() {
             </Item>
             <Item>
               <Card> 
-              <ImageList sx={{ width: 500, height: 450 }}>
+              <ImageList>
                 {itemData.map((item) => (
                   <ImageListItem key={item.img}>
                     <img
@@ -128,7 +136,7 @@ function App() {
                 <a href="https://github.com/GuyGoose/FYP_Material" target="_blank" rel="noopener noreferrer">Github</a>
               </Typography>
               <Typography variant="body1" component="div" gutterBottom>
-                <a href="" target="_blank" rel="noopener noreferrer">Demo Video</a>
+                <a href="https://youtu.be/chqEr_pH8Wk" target="_blank" rel="noopener noreferrer">Combat Demo Video</a>
               </Typography>
               <Typography variant="body1" component="div" gutterBottom paddingBottom={'1em'}>
                 <a href="" target="_blank" rel="noopener noreferrer">Poster</a>
